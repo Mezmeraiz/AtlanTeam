@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom_edit="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/progressView"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dialog_margins">
+
+            <TextView
+                android:id="@+id/textView_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center"
+                android:gravity="center"
+                android:textColor="@color/colorBlackDE"
+                android:textSize="@dimen/dialog_title_text_size" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="@dimen/main_card_margins"
+
+            android:layout_marginRight="@dimen/main_card_margins"
+            android:orientation="horizontal">
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/editText_dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="left|center"
+
+                    android:inputType="number"
+                    android:textColor="@color/colorBlackDE"
+                    android:textColorHint="@color/colorBlack66"
+                    android:textSize="@dimen/dialog_text_size" />
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/view_ok"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_item_height"
+            android:layout_marginTop="@dimen/dialog_margins">
+
+            <FrameLayout
+                android:id="@+id/click_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/text_margin"
+                android:layout_toStartOf="@+id/click_ok">
+
+                <TextView
+                    android:id="@+id/fontTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/text_margin"
+                    android:layout_marginRight="@dimen/text_margin"
+                    android:gravity="center"
+                    android:text="ОТМЕНА"
+                    android:textColor="?attr/colorAccent"
+                    android:textSize="@dimen/dialog_text_size" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/click_ok"
+                android:layout_width="@dimen/dialog_min_width"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/text_margin">
+
+                <TextView
+                    android:id="@+id/textView_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/text_margin"
+                    android:layout_marginRight="@dimen/text_margin"
+                    android:gravity="center"
+                    android:text="OK"
+                    android:textColor="?attr/colorAccent"
+                    android:textSize="@dimen/dialog_text_size" />
+            </FrameLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>
